@@ -18,6 +18,9 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="/" class="btn btn-primary my-3">Show Data</a>
+                @if (Session::has('msg'))
+                    <p class="alert alert-success">{{ Session::get('msg') }}</p>
+                @endif
                 <form action="{{ url('/store_data') }}" method="POST">
                     @csrf
                     <div class="form-group">
