@@ -27,3 +27,4 @@ Route::get('/add_data',[CrudController::class,'add_data']);
 Route::get('/edit_data/{id}',[CrudController::class,'edit_data']);
 Route::post('store_data',[CrudController::class,'store_data']);
 Route::post('/update_data/{id}',[CrudController::class,'update_data']);
+Route::get('/delete_data/{id}',[CrudController::class,'delete_data']);

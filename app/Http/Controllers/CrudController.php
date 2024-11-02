@@ -96,4 +96,13 @@ class CrudController extends Controller
         // Data Insert Ends
         return redirect('show_data');
     }
+    public function delete_data($From_web_php_paased_value_catcher = null)
+    {
+        // return $From_web_php_paased_value_catcher;
+        // Now we need to create an Instance for update the specific value
+        $delete_data = crud_two::find($From_web_php_paased_value_catcher);
+        $delete_data->delete();
+        Session::flash('msg','deleted Successfully');
+        return redirect('/show_data');
+    }
 }

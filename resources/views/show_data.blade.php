@@ -32,6 +32,7 @@
                     </thead>
 
                     <tbody>
+                        
                         @foreach ($showData as $key => $item)
                             <tr>
                                 <th scope="row">{{ $key + 1 }}</th>
@@ -39,7 +40,7 @@
                                 <td>{{ $item->email }}</td>
                                 <td>
                                   <a href="{{url('/edit_data/'.$item->id)}}" class="btn btn-success" style="margin: 0px 5px">Edit</a>
-                                  <a href="" class="btn btn-danger">Delete</a></td>
+                                  <a href="{{url('/delete_data/'.$item->id)}}" onclick="return alert('Are you sure you want to delete this Item :()')" class="btn btn-danger">Delete</a></td>
                             </tr>
                         @endforeach
                     </tbody>
