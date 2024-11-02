@@ -17,6 +17,7 @@ use App\Http\Controllers\CrudController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/',[CrudController::class,'showData']);
+Route::get('/',[CrudController::class,'index']);
+Route::get('/show_data',[CrudController::class,'show_data']);
 Route::get('/add_data',[CrudController::class,'add_data']);
 Route::post('store_data',[CrudController::class,'store_data']);
