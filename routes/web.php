@@ -20,4 +20,10 @@ use App\Http\Controllers\CrudController;
 Route::get('/',[CrudController::class,'index']);
 Route::get('/show_data',[CrudController::class,'show_data']);
 Route::get('/add_data',[CrudController::class,'add_data']);
+// Route::get('/edit_data/{id}',[CrudController::class,'edit_data']);
+// ('/edit_data/{id}') here id is a varible which will catch the value and pass into
+// the controller ,There will be a reciever as $With_any_name
+// Just because to catch the specific id's value to edit or to modify
+Route::get('/edit_data/{id}',[CrudController::class,'edit_data']);
 Route::post('store_data',[CrudController::class,'store_data']);
+Route::post('/update_data/{id}',[CrudController::class,'update_data']);

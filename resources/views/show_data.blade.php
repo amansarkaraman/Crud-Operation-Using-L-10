@@ -38,7 +38,7 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>
-                                  <a href="" class="btn btn-success" style="margin: 0px 5px">Edit</a>
+                                  <a href="{{url('/edit_data/'.$item->id)}}" class="btn btn-success" style="margin: 0px 5px">Edit</a>
                                   <a href="" class="btn btn-danger">Delete</a></td>
                             </tr>
                         @endforeach
