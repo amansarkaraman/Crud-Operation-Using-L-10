@@ -17,6 +17,19 @@ use App\Http\Controllers\CrudController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::get('/home', function () {
+    return view('screen_one');
+});
+Route::get('/create-project', function () {
+    return view('screen_two');
+});
+Route::get('/purpose', function () {
+    return view('screen_three');
+});
+Route::get('/add-amount', function () {
+    return view('screen_four');
+});
 Route::get('/',[CrudController::class,'index']);
 Route::get('/show_data',[CrudController::class,'show_data']);
 Route::get('/add_data',[CrudController::class,'add_data']);
